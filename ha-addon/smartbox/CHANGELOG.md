@@ -1,5 +1,14 @@
 # Ändringar
 
+## 1.2.83 (2026-11-13)
+- **NIBE S735 via pumpens lokala REST-API** (`driver: nibe_local`). Frånluftspumpen S735/S735C läses nu som
+  S1155/S1255: ute, framledning, retur, varmvatten, rum, kompressorstatus, frekvens, el och uppmätt COP. NIBE:s
+  registerexport för S735 har samma register för alla de värdena, och varje värde kontrolleras mot pumpens metadata.
+- **Styrning via värmekurvans förskjutning** när rumsgivare saknas (vanligt på S735): bind `heating_offset` till
+  register 30 så blir önskad innetemp en förskjutning kring husets vanliga (`offset_normal`, `offset_base_c`,
+  `offset_steps_per_c`, `offset_min`/`offset_max`). Med rumsgivare går `room_target` (register 206) före. Färdigt
+  S735-exempel i docs/nibe-local-rest.md.
+
 ## 1.2.82 (2026-11-13)
 - **Husbatteriets laddning från nätet håller sig inom säkringen** (#399). Förut laddade batteriet med full effekt
   (vid minuspris och planerad laddning) oavsett vad huset drog, och säkringsskyddet grep in först när säkringen
