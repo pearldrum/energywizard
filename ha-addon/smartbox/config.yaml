@@ -1,9 +1,9 @@
-name: "EnergyWizard"
-version: "1.2.82"
-image: "ghcr.io/murre87/energywizard"
+name: "EnergyWizard (S735)"
+version: "1.2.83"
+# Ingen image: Supervisor bygger tillägget själv ur forken (pearldrum/energywizard, grenen ha-s735)
 slug: "smartbox"
 description: "Minut-för-minut styrning av elbil, värmepump, solcellsexport, spabad och huvudsäkring efter spotpriset - helt via Home Assistants egna entiteter."
-url: "https://github.com/murre87/energywizard"
+url: "https://github.com/pearldrum/energywizard"
 arch:
   - amd64
   - aarch64
