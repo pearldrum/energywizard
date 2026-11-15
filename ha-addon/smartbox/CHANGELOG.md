@@ -8,6 +8,8 @@
   register 30 så blir önskad innetemp en förskjutning kring husets vanliga (`offset_normal`, `offset_base_c`,
   `offset_steps_per_c`, `offset_min`/`offset_max`). Med rumsgivare går `room_target` (register 206) före. Färdigt
   S735-exempel i docs/nibe-local-rest.md.
+- **HA-entiteter: `offset_normal`** för NIBE via kurvförskjutning (`curve_offset`): husets vanliga förskjutning
+  (t.ex. +1) är utgångsläget i stället för 0, så huset inte blir kallare/varmare än vanligt.
 
 ## 1.2.82 (2026-11-13)
 - **Husbatteriets laddning från nätet håller sig inom säkringen** (#399). Förut laddade batteriet med full effekt
