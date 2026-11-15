@@ -1,5 +1,5 @@
 name: "EnergyWizard (S735)"
-version: "1.2.83"
+version: "1.2.84"
 # Ingen image: Supervisor bygger tillägget själv ur forken (pearldrum/energywizard, grenen ha-s735)
 slug: "smartbox"
 description: "Minut-för-minut styrning av elbil, värmepump, solcellsexport, spabad och huvudsäkring efter spotpriset - helt via Home Assistants egna entiteter."
