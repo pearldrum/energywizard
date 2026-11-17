@@ -147,7 +147,8 @@ def build_charger_drivers(cfg: dict) -> dict:
         if driver_cls is EaseeChargerDriver:
             out[car_id] = _easee_driver(charger_cfg)
         elif driver_cls is GenericChargerDriver:
-            out[car_id] = GenericChargerDriver(id=charger_cfg.get("id", ""), entities=(charger_cfg.get("entities") or {}))
+            out[car_id] = GenericChargerDriver(id=charger_cfg.get("id", ""), entities=(charger_cfg.get("entities") or {}),
+                                               current_limit_service=charger_cfg.get("current_limit_service"))
         else:
             out[car_id] = driver_cls(id=charger_cfg.get("id", ""))
     return out
@@ -171,7 +172,8 @@ def build_physical_charger_drivers(cfg: dict) -> dict:
             out[physical_id] = drv
         elif driver_cls is GenericChargerDriver:
             physical_id = charger_cfg.get("id", "")
-            out[physical_id] = GenericChargerDriver(id=physical_id, entities=(charger_cfg.get("entities") or {}))
+            out[physical_id] = GenericChargerDriver(id=physical_id, entities=(charger_cfg.get("entities") or {}),
+                                                    current_limit_service=charger_cfg.get("current_limit_service"))
         else:
             physical_id = charger_cfg.get("id", "")
             out[physical_id] = driver_cls(id=physical_id)

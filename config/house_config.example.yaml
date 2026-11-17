@@ -31,6 +31,12 @@ evs: []
 #       entities:
 #         status: sensor.min_laddare_status
 #         current_a: sensor.min_laddare_strom
+#       # Saknar laddaren en number-entitet för strömgränsen men har en egen tjänst (t.ex. Charge Amps
+#       # molnintegration, kirei/hass-chargeamps), styrs strömmen via tjänsten istället:
+#       # current_limit_service:
+#       #   service: chargeamps.set_max_current
+#       #   field: max_current             # fältet som får amperetalet
+#       #   data: {connector: 1}           # valfria fasta fält (t.ex. charge_point om du har flera boxar)
 
 # --- Värmepump (valfri) ---
 heat_pump:
